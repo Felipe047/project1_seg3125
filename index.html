@@ -6,6 +6,7 @@
         <title>Tutoring With Claire</title>
         <meta name="author" content="Felipe Garcia Affonso">
         <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <style>
             .custom-background {
@@ -13,6 +14,15 @@
             }
             body {
                 font-family: Itim, sans-serif;
+            }
+
+            .quote {
+                font-family: Inter;
+                font-style: italic;
+            }
+
+            .card-color {
+                background-color: #D9D9D9;
             }
         </style>
     </head>
@@ -33,7 +43,7 @@
                             <a class="nav-link text-white" aria-current="page" href="#contact">Contanct Me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-danger" href="#">BOOK</a>
+                            <a class="btn btn-danger" href="./book.html">BOOK</a>
                         </li>
                     </ul>
                 </div>
@@ -60,7 +70,7 @@
                             background: radial-gradient(rgba(255,255,255,1) 0%, rgba(0,0,0,0) 80%);
                             ">
                         <h1 style="font-size: 3rem;">Set your children for a better future</h1>
-                        <a class="btn btn-danger" style="font-size: 1.5rem;" href="#">BOOK NOW</a>
+                        <a class="btn btn-danger" style="font-size: 1.5rem;" href="./book.html">BOOK NOW</a>
                     </div>
                 </div>
             </section>
@@ -81,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center text-center">
+                <div class="row text-center justify-content-center">
                     <h2>I help kids from middle school to high school get better grades</h2>
                     <p>My tutoring sessions are designed to help your child understand the subject and get better grades. I have a proven track record of helping kids get better grades and understand the subject.</p>
                 </div>
@@ -97,12 +107,87 @@
                         <img src="./img/Star.png" alt="Star">
                     </div>
                 </div>
-                <div>
+                <div class="row align-items-center text-center">
+                    <div class="col-3"></div>
+                    <div id="carouselExampleControls" class="carousel slide col" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="card card-color" style="height: 15rem;">
+                                <div class="card-body">
+                                    <h4 class="card-title quote">“Great teacher. My grades are only above the 80’s after I started with her”</h4>
+                                    <h4 class="card-text">- John S.</h4>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="card card-color" style="height: 15rem;">
+                                <div class="card-body">
+                                    <h4 class="card-title quote">"Before working with Claire, I struggled to keep up in science class. She explained things in a way that actually made sense, and now I feel so much more prepared for tests!"</h4>
+                                    <h4 class="card-text">– Mia J.</h4>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="card card-color" style="height: 15rem;">
+                                <div class="card-body">
+                                    <h4 class="card-title quote">"Claire’s tutoring made a huge difference for my son! He went from dreading math to feeling confident in his abilities. His grades improved, and so did his attitude toward learning."</h4>
+                                    <h4 class="card-text">– Sarah L.</h4>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="col-3"></div>
                 </div>
             </section>
 
             <section id="contact">
-                
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1>Contact Me</h1>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+                                    <div id="nameHelp" class="form-text">We'll never share your name with anyone else.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-danger" onclick="submitForm()">SUBMIT</button>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <h1>Location</h1>
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.7844681642085!2d-75.69923432400754!3d45.42152903589873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce050b6b3c0e01%3A0x731b20c74ae50228!2sDowntown%20Ottawa%2C%20Ottawa%2C%20ON!5e0!3m2!1sen!2sca!4v1708888888888!5m2!1sen!2sca" 
+                                width="600" 
+                                height="450" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy"></iframe>
+
+                        </div>
+                    </div>
+                    <div class="row align-items-center text-center">
+                        <h1>Get in touch</h1>
+                        <h3><a href="mailto:email.email.com">email.email.com</a><br><a href="phoneto:+15555555555"> +1 (613) 123 4567</a></h3>
+                </div>
             </section>
         </main>
 
@@ -115,6 +200,18 @@
                 </div>
             </section>
         </footer>
+
+        <script>
+            // make submitForm function
+            function submitForm() {
+                // clear form
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+                alert("Form submitted!");
+            }
+        </script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
