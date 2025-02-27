@@ -53,6 +53,9 @@
                 <div class="ms-auto" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="./index.html#home">Home</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-white" aria-current="page" href="./index.html#services">Services</a>
                         </li>
                         <li class="nav-item">
@@ -85,6 +88,17 @@
                             <div id="datepicker"></div>
                         </div>
                         <div class="col"></div>
+                    </div>
+                    <label>Time:</label>
+                    <div class="row">
+                        <div class="col">
+                            <label for="timepicker" class="form-label">From</label>
+                            <input type="text" id="timepicker">
+                        </div>
+                        <div class="col">
+                            <label for="timepicker" class="form-label">To</label>
+                            <input type="text" id="timepicker">
+                        </div>
                     </div>
                     
                     <div class="row">
@@ -131,6 +145,12 @@
                 inline: true,  // Keeps the calendar always visible
                 dateFormat: "Y-m-d",  // Customize date format
                 minDate: "today"  // Disable past dates
+            });
+            flatpickr("#timepicker", {
+                enableTime: true,  // Enables time selection
+                noCalendar: true,  // Hides the date picker
+                dateFormat: "H:i", // Format (24-hour: "H:i", 12-hour: "h:i K")
+                time_24hr: true    // Set to false for AM/PM format
             });
 
             function submitForm() {
